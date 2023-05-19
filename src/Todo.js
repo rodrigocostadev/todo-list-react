@@ -18,11 +18,22 @@ function Todo(){
         setItems(filteredItems) // atualiza os elementos, excluindo elementos apagados
     }
 
+    function onDone(item){  
+        let updatedItems = items.map(it => { //vai gerar um novo array
+            if(it.id === item.id){ // item.id é o item que eu cliquei, o it é cada item do array
+                it.done = !it.done // se for igual vai mudar o done, vai receber o contrario dele
+            }
+            return it //retorna o item "modificado"
+        })
+
+        setItems(updatedItems) //atualiza o estado com os itens que foram "modificados"
+    }
+
     return( <div className="container" >
 
         <h1>Todo</h1>
         <TodoForm onAddItem={onAddItem} ></TodoForm>
-        <List onItemDeleted={onItemDeleted} items={items}></List>
+        <List onDone={onDone} onItemDeleted={onItemDeleted} items={items}></List>
     
     </div>)
 }
