@@ -13,12 +13,12 @@ function TodoForm(props){
     function addItem(event){
         // metodo Prevent default:
         event.preventDefault() //prevent default evita que ao digitar no campo de input, o texto digitado suma, pois sem o prevent.default ele
-        // entende que estamos enviando os dados pro back end, então ele apaga. prevent.default evita que o texto digitado seja apagado
+        // entende que estamos enviando os dados pro back end, então ele apaga. prevent.default evita que o texto digitado seja "apagado"
 
         if(text){ // esse if evita adicionar itens vazios
             // setItems([...items,text])//Spread operator para concatenar os itens dentro do array
             props.onAddItem(text)
-            setText("")//limpa o valor do imput ao ser adicionado
+            setText("")//limpa o valor do input ao ser adicionado
         }
     }
 
