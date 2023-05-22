@@ -1,0 +1,1 @@
+Projeto de estudos de nivel iniciante feito juntamente com o curso Programador Br, nele foi aprendido e exercitado um pouco do React, foi tambem utilizado muitos temas que foram aprendidos no modulo de aprendizagem do React, como os hooks, os componentes, entre outros.
