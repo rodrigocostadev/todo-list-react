@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import './Todo.css'
-import List from "./List";
-import TodoForm from "./TodoForm";
-import Item from "./Item";
+import List from "./components/List";
+import TodoForm from "./components/TodoForm";
+import Item from "./components/Item";
 
 function Todo(){
     const [items, setItems] = useState([]) //items é um array vazio, (são os itens da lista)
@@ -12,9 +12,14 @@ function Todo(){
         setItems([...items,it])//Spread operator para concatenar onovo item com os outros itens dentro do array
     }        
 
-    function onItemDeleted(item){
-        let filteredItems = items.filter(it => it.id != item.id) //se o item que eu cliquei tiver o id diferente dos outros itens, vai apagar
+    function onItemDeleted(item){ //essa função vai filtrar os elementos que ainda não foram clicados, vai criar um array com eles, 
+        // e com base nisso, vai excluir os elementos clicados, atualizando o estado do array de itens principal, veja melhor abaixo:
 
+        let filteredItems = items.filter(it => it.id != item.id) //se o item que eu cliquei tiver o id diferente dos outros itens, vai apagar.
+        // vai filtrar os itens que forem diferentes dos que eu cliquei. it são os itens dentro do meu array de ITEMS (tarefas), 
+        // o item.id é o item que eu cliquei.
+        
+        // console.log(filteredItems)
         setItems(filteredItems) // atualiza os elementos, excluindo elementos apagados
     }
 
