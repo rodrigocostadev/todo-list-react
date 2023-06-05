@@ -9,7 +9,7 @@ function Todo(){
 
     function onAddItem(text){ //Essa função serve para passar items do elemento filho (arquivo TODOFORM) para o elemento pai (arquivo TODO)
         let it = new Item(text)
-        setItems([...items,it])//Spread operator para concatenar onovo item com os outros itens dentro do array
+        setItems([...items,it])//Spread operator para concatenar o novo item com os outros itens dentro do array
     }        
 
     function onItemDeleted(item){ //essa função vai filtrar os elementos que ainda não foram clicados, vai criar um array com eles, 
