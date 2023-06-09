@@ -22,17 +22,19 @@ function TodoForm(props){
         }
     }
 
-    // function clearAll (items){
-    //     if(items){
-    //         items = ""
-    //     }
-    // }
+    function clearAll(){
+        // console.log(props.items)
+        if(props.items){
+            return (props.removeItem())
+        }
+        // return (props.removeItem())
+    }
 
     return(
         <form>
             <input id="input" onChange={handleChange} type="text" value={text} placeholder="Defina aqui suas Metas"></input>
             <button onClick={addItem} className="botoesprincipais" >Adicionar</button>
-            {/* <button className="botoesprincipais" onClick={clearAll} >Limpar Tudo</button> */}
+            <button className="botoesprincipais" onClick={clearAll} >Limpar Tudo</button>
         </form>
     )
 }

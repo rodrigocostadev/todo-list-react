@@ -22,8 +22,8 @@ function Todo(){
     }, [])
 
     useEffect(() => {
-    localStorage.setItem(SAVED_ITEMS, JSON.stringify(items))
-    // console.log(items)
+        localStorage.setItem(SAVED_ITEMS, JSON.stringify(items))
+        // console.log(items)
         
     },[items])
 
@@ -54,13 +54,23 @@ function Todo(){
         setItems(updatedItems) //atualiza o estado com os itens que foram "modificados"
     }
 
+    function removeItem (){
+
+        setItems("")
+        localStorage.setItem(SAVED_ITEMS, JSON.stringify(items))
+        // if(items){
+        //     // items = ""
+        //     console.log(items)
+        // }
+    }
+
     return(
     <div>
         <div className="container" >
 
             <h1>Minhas Metas Para <Year></Year></h1>
             <h3>Faltam <ReverseCounter></ReverseCounter> Dias </h3>
-            <TodoForm onAddItem={onAddItem} ></TodoForm>
+            <TodoForm onAddItem={onAddItem} removeItem={removeItem} items={items}></TodoForm>
             <List onDone={onDone} onItemDeleted={onItemDeleted} items={items}></List>
         
         </div>
