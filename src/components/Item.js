@@ -1,7 +1,7 @@
 
 class Item {
 
-    static lastId = 0 // Static é uma variavel de classe
+    static lastId = 0 //Esse é o id inicialpara cada item, Static é uma variavel de classe
 
     constructor(text){
         this.text = text

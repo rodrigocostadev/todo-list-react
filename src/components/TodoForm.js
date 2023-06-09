@@ -4,10 +4,10 @@ function TodoForm(props){
     const [text, setText] = useState("")   
 
     function handleChange(event){
-        let t = event.target.value
-        // console.log(t)
+        let Target = event.target.value
+        // console.log(Target)
         // toda vez que eu digitar no campo de input, vai rodar essa função, por isso o estado da const text vai iniciar vazio
-        setText(t)// aqui é como se text recebe-se o valor de setText(t) 
+        setText(Target)// aqui é como se text recebe-se o valor de setText(t) 
     }
 
     function addItem(event){
@@ -22,10 +22,17 @@ function TodoForm(props){
         }
     }
 
+    // function clearAll (items){
+    //     if(items){
+    //         items = ""
+    //     }
+    // }
+
     return(
         <form>
-            <input onChange={handleChange} type="text" value={text}></input>
-            <button onClick={addItem} >Add</button>
+            <input id="input" onChange={handleChange} type="text" value={text} placeholder="Defina aqui suas Metas"></input>
+            <button onClick={addItem} className="botoesprincipais" >Adicionar</button>
+            {/* <button className="botoesprincipais" onClick={clearAll} >Limpar Tudo</button> */}
         </form>
     )
 }

@@ -1,30 +1,204 @@
+body{
+    text-align: center;
+    background-color: black;
+    background-image: url(../public/assets/investment-gb812c5721_1920.jpg);
+    /* background-color: black; */
+    background-size: cover;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position-y: 0%;
+    /* position: relative; */
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: 'Playball', cursive;
+    font-size: 70px;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h3{
+    font-family: 'Playball', cursive;
+    font-size: 37px;
+    color: black;
+    margin-bottom: 30px;
+}
 img{
-    width: 30px;
+    width: 20px;
+    align-items: center;
+    /* background-color: blueviolet; */
 }
 ul{
     list-style: none;
     margin: 0;
     padding: 0;
 }
+a{
+    color: white;
+}
 .container{
     margin: auto;
-    max-width: 600px;
+    max-width: 900px;
+    text-align: center;
+    /* background-color: red; */
+    /* transform: translateX(-50%); */
+    /* position: relative; */
+    /* height: 600px; */
 }
 .done{
     text-decoration: line-through;
+    background: green;
 }
 .item{
-    width: 100%;
+    width: 90%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
-    margin-top: 15px;
-    padding: 15px;    
-    border-radius: 10px;
-}
-.card{
-    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
-    /*BOX SHADOW =  deslocamento na horizontal\ deslocamento na vertical\ blur \ "espalhar" \ cor da sombra*/
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* padding: 5px;     */
+    padding-bottom: 4px;
+    border-radius: 0px;
+    /* background-color: grey; */
+    opacity: 0.9;
+    /* font-family: 'Playball', cursive; */
+    font-family: 'Nunito Sans', cursive;
+    font-size: 25px;
 }
 
+li{
+    opacity: 0.9;
+    background: linear-gradient(90deg,
+    rgba(255, 118, 20,1),
+    rgba(255, 84, 17,1)  );
+    /* position: relative; */
+    /* background-color: red; */
+}
+
+
+/* li:nth-child(4n + 1){
+    background: linear-gradient(90deg,
+        rgba(93, 12, 255,1),
+        rgba(9, 12, 255,1)
+    );
+}
+li:nth-child(4n + 2){
+    background: linear-gradient(90deg,
+        rgba(255, 12, 241,1),
+        rgba(250, 0, 135,1)
+    );
+}
+li:nth-child(4n + 3){
+    background: linear-gradient(90deg,
+        rgba(20, 159, 255,1),
+        rgba(17, 122, 255,1)
+    );
+} */
+
+
+
+/* .card{
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
+    BOX SHADOW =  deslocamento na horizontal\ deslocamento na vertical\ blur \ "espalhar" \ cor da sombra
+} */
+
+.botoesprincipais{
+    border-radius: 6px;
+    border-style: none;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: white;
+    margin-right: 10px;
+    width: 100px;
+    height: 30px;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+}
+.buttonIcons{
+    margin-left: 5px;
+    border-radius: 7px;
+    border-style: none;
+    margin-right: 5px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /* font-family: 'Play', sans-serif; */
+    font-weight: 700;
+    
+}
+
+#input{
+    width: 450px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    height: 30px;
+    opacity: 0.78;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+.credits{
+    margin-top: 500px;
+    /* margin-right: 200px; */
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    position: sticky;
+    bottom: 0;
+}
+
+
+@media (max-width: 1450px){
+    body{
+        background-size: 115%;
+    }
+}
+@media (max-width: 1100px){
+    body{
+        background-size: 160%;
+    }
+    .credits{
+        margin-top: 400px;
+    }
+}
+@media (max-width: 850px){
+    body{
+        background-size: 220%;
+    }
+    #input{
+        width: 350px;
+    }
+}
+@media (max-width: 670px){
+    body{
+        background-size: 300%;
+        background-position-x: 10%;
+        background-position-y: top;
+    }
+    #input{
+        width: 180px;
+        margin-right: 10px;
+    }
+    .botoesprincipais{
+        margin-right: 2px;
+        width: 93px;
+        height: 30px;
+    }
+    .credits{
+        margin-top: 400px;
+        font-size: 15px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h3{
+        font-size: 25px;
+    }
+}

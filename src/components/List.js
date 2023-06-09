@@ -18,12 +18,12 @@ function List(props){
     return(
         <ul>
             {props.items.map(item => 
-            <li  key={item.id} >
+            <li  key={item.id} className={item.done ? "done item" : "item"} >
                 <Card className={item.done ? "done item" : "item"} >
                     {item.text}
                     <div>
-                        <button onClick={() =>{props.onDone(item)}} ><DoneImg done={item.done} ></DoneImg></button>
-                        <button onClick={() =>{props.onItemDeleted(item)}} ><img src="./assets/trash-bin.png" ></img></button>
+                        <button className="buttonIcons" onClick={() =>{props.onDone(item)}} ><DoneImg done={item.done} ></DoneImg></button>
+                        <button className="buttonIcons" onClick={() =>{props.onItemDeleted(item)}} ><img src="./assets/trash-bin.png" ></img></button>
                     </div>
                 </Card>               
                 
