@@ -24,10 +24,18 @@ function TodoForm(props){
 
     function clearAll(){
         // console.log(props.items)
-        if(props.items){
-            return (props.removeItem())
-        }
+
+        // if(props.items){
+        //     return (props.removeItem())
+        // }
+
         // return (props.removeItem())
+
+        // props.removeItem()
+
+        // if (props){
+        //     props.removeItem()
+        // }
     }
 
     return(

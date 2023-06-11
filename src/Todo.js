@@ -56,7 +56,7 @@ function Todo(){
 
     function removeItem (){
 
-        setItems("")
+        setItems([])
         localStorage.setItem(SAVED_ITEMS, JSON.stringify(items))
         // if(items){
         //     // items = ""
