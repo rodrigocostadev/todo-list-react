@@ -58,10 +58,7 @@ function Todo(){
 
         setItems([])
         localStorage.setItem(SAVED_ITEMS, JSON.stringify(items))
-        // if(items){
-        //     // items = ""
-        //     console.log(items)
-        // }
+
     }
 
     return(
