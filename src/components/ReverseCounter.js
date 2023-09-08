@@ -15,12 +15,14 @@ function ReverseCounter(){
     limitDate.setSeconds(59)
     limitDate.setMilliseconds(999)    
 
+    // parse pega os milisegundos
     let miliSecondsDataLimite = Date.parse(limitDate)
     let miliSecondsNow = Date.parse(dateNow)
 
     let subMiliSeconds = (miliSecondsDataLimite - miliSecondsNow)
     //    console.log (subMiliSeconds)
 
+    // 86400000 MS em um dia
     let counterDays = Math.floor(subMiliSeconds / 86400000)
     // console.log(counterDays)
 
