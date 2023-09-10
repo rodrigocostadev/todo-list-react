@@ -123,6 +123,7 @@ li:nth-child(4n + 3){
 .botoesprincipais:hover{
     transition: 300ms;
     transform: scale(1.15);
+    cursor: pointer;
 }
 .buttonIcons{
     margin-left: 5px;
@@ -139,6 +140,7 @@ li:nth-child(4n + 3){
 .buttonIcons:hover{
     transition: 300ms;
     transform: scale(1.3);
+    cursor: pointer;
 }
 
 #input{
