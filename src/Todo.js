@@ -35,7 +35,7 @@ function Todo(){
     function onItemDeleted(item){ //essa função vai filtrar os elementos que ainda não foram clicados, vai criar um array com eles, 
         // e com base nisso, vai excluir os elementos clicados, atualizando o estado do array de itens principal, veja melhor abaixo:
 
-        let filteredItems = items.filter(it => it.id != item.id) //se o item que eu cliquei tiver o id diferente dos outros itens, vai apagar.
+        let filteredItems = items.filter(it => it.id !== item.id) //se o item que eu cliquei tiver o id diferente dos outros itens, vai apagar.
         // vai filtrar os itens que forem diferentes dos que eu cliquei. it são os itens dentro do meu array de ITEMS (tarefas), 
         // o item.id é o item que eu cliquei.
         

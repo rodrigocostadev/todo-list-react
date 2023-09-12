@@ -23,7 +23,7 @@ function List(props){
                     {item.text}
                     <div>
                         <button className="buttonIcons" onClick={() =>{props.onDone(item)}} ><DoneImg done={item.done} ></DoneImg></button>
-                        <button className="buttonIcons" onClick={() =>{props.onItemDeleted(item)}} ><img src="./assets/trash-bin.png" ></img></button>
+                        <button className="buttonIcons" onClick={() =>{props.onItemDeleted(item)}} ><img alt="lixeira" src="./assets/trash-bin.png" ></img></button>
                     </div>
                 </Card>               
                 
